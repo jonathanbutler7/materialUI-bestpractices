@@ -39,6 +39,18 @@ function EmployeeForm() {
             value={values.email}
             onChange={handleChange}
           />
+          <Controls.Input
+            label='Mobile'
+            name='mobile'
+            value={values.mobile}
+            onChange={handleChange}
+          />
+          <Controls.Input
+            label='City'
+            name='city'
+            value={values.city}
+            onChange={handleChange}
+          />
         </Grid>
         <Grid item xs={6}>
           <Controls.RadioGroup
@@ -55,6 +67,22 @@ function EmployeeForm() {
             onChange={handleChange}
             options={employeeService.getDepartmentCollection()}
           />
+          <Controls.DatePicker
+            name='hireDate'
+            label='Hire Date'
+            value={values.hireDate}
+            onChange={handleChange}
+          />
+          <Controls.Checkbox
+            name='isPermanent'
+            label='Permanent Employee'
+            value={values.isPermanent}
+            onChange={handleChange}
+          />
+          <div>
+            <Controls.Button text='submit' type='submit' />
+            <Controls.Button text='reset' color='default' />
+          </div>
         </Grid>
       </Grid>
     </Form>

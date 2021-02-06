@@ -8,7 +8,6 @@ import React from 'react';
 
 function Select(props) {
   const { name, label, value, onChange, options } = props;
-  console.log(options)
   return (
     <FormControl variant='outlined'>
       <InputLabel>{label}</InputLabel>
